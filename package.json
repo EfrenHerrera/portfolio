@@ -9,11 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@svgr/webpack": "^8.1.0",
     "@tabler/icons-react": "^2.47.0",
+    "alea": "^1.0.1",
     "next": "14.0.2",
     "react": "^18",
     "react-dom": "^18",
-    "sass": "^1.69.5"
+    "sass": "^1.69.5",
+    "simplex-noise": "^4.0.2"
   },
   "devDependencies": {
     "@types/node": "^20",

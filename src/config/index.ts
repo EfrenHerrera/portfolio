@@ -48,7 +48,7 @@ interface Experience {
 
 export const experiences: Experience[] = [
     {
-        period: "2022 - Present",
+        period: "Sep 2022 - Present",
         title: "Full-Stack Developer • Dealergeek",
         link:"https://dealergeek.com/",
         position: "Senior Engineer",
@@ -56,7 +56,7 @@ export const experiences: Experience[] = [
         technologies: ["React Native", "Angular", "Python", "MongoDB", "AWS", "Docker", "MySQL"],
     },
     {
-        period: "2022 - 2022",
+        period: "May 2022 - Sep 2022",
         title: "Mobile Developer • Kab",
         link: "https://www.kabplataforma.com/",
         position: "Semi-Senior Engineer",
@@ -88,21 +88,21 @@ export const projects: Project[] = [
         img: ""
     },
     {
-        title: "System Admin",
-        description: "System for the administration of a company, with modules for sales, purchases, inventory, accounting, etc.",
-        technologies: ["NextJS", "Python", "Docker", "AWS", "MongoDB"],
-        img: ""
-    },
-    {
-        title: "Kab Pasajero Mobile App",
+        title: "Kab Pasajero",
         description: "Application for passengers to request a taxi, similar to Uber.",
         technologies: ["React Native", "NodeJS", "ParseDB"],
         img: ""
     },
     {
-        title: "Doc Reports Mobile App",
+        title: "Doc Reports Mobile",
         description: "Application for the management of medical reports.",
         technologies: ["React", "Python", "MongoDB", "Docker", "AWS"],
+        img: ""
+    },
+    {
+        title: "Financial Leader Board",
+        description: "Application for the management of medical reports.",
+        technologies: ["React Native", "Python", "MongoDB", "Docker", "AWS"],
         img: ""
     },
     {

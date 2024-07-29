@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.scss'
+import MouseFollower from './components/MouseFollower'
+import NaviFly from './components/NaviFly'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -14,7 +16,8 @@ export default function RootLayout({ children, }: { children: React.ReactNode })
     <html lang="en" className='scroll-smooth'>
       <body className={inter.className}>
         <div className='bg-slate-900 leading-relaxed text-slate-400 antialiased selection:bg-teal-300 selection:text-teal-900'>
-          <div className="pointer-events-none fixed inset-0 z-30 transition duration-300 lg:absolute" style={{ background: 'radial-gradient(600px at 1081px 375px, rgba(29, 78, 216, 0.15), transparent 80%)' }}></div>
+          <MouseFollower />
+          <NaviFly/>
           {children}
         </div>
       </body>
