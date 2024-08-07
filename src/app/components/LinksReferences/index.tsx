@@ -7,7 +7,7 @@ import IconLinkedIn from '@images/linkedin.svg'
 
 const LinksReferences = () => {
     return (
-        <ul className="ml-1 mt-8 flex items-center" aria-label="Social media">
+        <ul className="ml-1 mt-8 flex items-center flex-wrap" aria-label="Social media">
             <li className="mr-5 text-xs">
                 <a className="block hover:text-slate-200" href="https://github.com/EfrenHerrera/" target="_blank" rel="noreferrer">
                     <span className="sr-only">GitHub</span>

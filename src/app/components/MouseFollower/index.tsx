@@ -11,8 +11,8 @@ const MouseFollower = () => {
             if (followerRef.current) {
                 const followerWidth = followerRef.current.offsetWidth;
                 const followerHeight = followerRef.current.offsetHeight;
-                followerRef.current.style.left = `${e.pageX - followerWidth / 2}px`;
-                followerRef.current.style.top = `${e.pageY - followerHeight / 2}px`;
+                followerRef.current.style.left = `${e.clientX - followerWidth / 2}px`;
+                followerRef.current.style.top = `${e.clientY - followerHeight / 2}px`;
                 followerRef.current.style.opacity = 1;
             }
         };

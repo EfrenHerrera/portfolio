@@ -68,6 +68,7 @@ const NaviFly = () => {
 
   return (
     <div
+      key="navifly"
       ref={naviRef}
       style={{
         position: 'fixed',

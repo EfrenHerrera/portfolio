@@ -1,3 +1,5 @@
+import { Icon, IconBrandAndroid, IconBrandAngular, IconBrandApple, IconBrandAws, IconBrandDocker, IconBrandPython, IconBrandReact } from "@tabler/icons-react";
+import React from "react";
 import { parseArgs } from "util";
 
 interface Navigation {
@@ -14,14 +16,10 @@ export const navigations: Navigation[] = [
         id: 'experience',
         label: 'Experience'
     },
-    {
-        id: 'projects',
-        label: 'Projects'
-    },
     // {
-    //     id: 'contact',
-    //     label: 'Contact'
-    // }
+    //     id: 'projects',
+    //     label: 'Projects'
+    // },
 ];
 
 export const about = {
@@ -29,6 +27,42 @@ export const about = {
     paragraph2: "",
     paragraph3: ""
 }
+
+interface Technology {
+    name: string;
+    icon: React.ElementType;
+}
+
+export const technologies: Array<Technology> = [
+    {
+        name: "Python",
+        icon: IconBrandPython 
+    },
+    {
+        name: "Angular",
+        icon: IconBrandAngular 
+    },
+    {
+        name: "React",
+        icon: IconBrandReact
+    },
+    {
+        name: "Android",
+        icon: IconBrandAndroid
+    },
+    {
+        name: "IOS",
+        icon: IconBrandApple
+    },
+    {
+        name: "AWS",
+        icon: IconBrandAws
+    },
+    {
+        name: "Docker",
+        icon: IconBrandDocker
+    }
+]
 
 
 interface Link {
@@ -105,12 +139,6 @@ export const projects: Project[] = [
         technologies: ["React Native", "Python", "MongoDB", "Docker", "AWS"],
         img: ""
     },
-    {
-        title: "Time Clock",
-        description: "Application for the control of the entry and exit of employees.",
-        technologies: ["React Native", "Python", "MongoDB", "Docker", "AWS"],
-        img: ""
-    }
 ]
 
 

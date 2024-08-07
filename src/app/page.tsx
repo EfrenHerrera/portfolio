@@ -1,12 +1,10 @@
 import React from 'react'
-import { navigations } from '@/config/index'
-import { IconArrowUpRight } from '@tabler/icons-react'
+import { navigations, technologies } from '@/config/index'
 import LinksReferences from './components/LinksReferences'
 import Experiences from './components/Experiences'
 import Projects from './components/Projects'
 
 const Home: React.FC = () => {
-  const ArrowIcon = () => <IconArrowUpRight className='inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px' />
   return (
     <div className="mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-20 lg:px-24 lg:py-0">
       <div className='lg:flex lg:justify-between lg:gap-6'>
@@ -14,17 +12,24 @@ const Home: React.FC = () => {
           <div>
             <h1 className='text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl'>Efren Herrera</h1>
             <h2 className="mt-3 text-2xl font-medium tracking-tight text-slate-200">Full-Stack Engineer</h2>
-            <p className="mt-4 max-w-xs leading-normal">I code seamless, innovative, and responsive digital solutions for an unparalleled user experience.</p>
+            <p className="mt-4 max-w-xs leading-normal">
+              I code seamless, innovative, and responsive digital solutions for an unparalleled user experience.
+            </p>
+
             {/* Technologies of interest */}
             <div>
               <h2 className="mt-3 text-lg font-medium tracking-tight text-slate-200">Technologies of interest</h2>
-              <ul className="ml-1 mt-8 flex items-center" aria-label="Technologies of interest">
-                <li className="mr-5 text-xs">
-                  <a className="block hover:text-slate-200" href="https://github.com/EfrenHerrera/" target="_blank" rel="noreferrer">
-                    <span className="sr-only">GitHub</span>
-                    
-                  </a>
-                </li>
+              <ul className="ml-1 mt-3 flex items-center flex-wrap" aria-label="Technologies of interest">
+                {
+                  technologies.map((tech, index) => (
+                    <li className="mr-5 text-xs" key={`technologies-${index}`}>
+                      <a className="block hover:text-slate-200" target="_blank" rel="noreferrer">
+                        <span className="sr-only">{tech.name}</span>
+                        <tech.icon size={30} stroke={1} />
+                      </a>
+                    </li>
+                  ))
+                }
               </ul>
             </div>
 
@@ -33,7 +38,7 @@ const Home: React.FC = () => {
               <ul className="mt-16 w-max">
                 {
                   navigations.map((nav, index) => (
-                    <li>
+                    <li key={`section-${index}`}>
                       <a className="group flex items-center py-3 active" href={`#${nav.id}`}>
                         <span className="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"></span>
                         <span className="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200">
@@ -86,9 +91,9 @@ const Home: React.FC = () => {
             <Experiences />
           </section>
 
-          <section id="projects" className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24" aria-label="Selected projects">
+          {/* <section id="projects" className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24" aria-label="Selected projects">
             <Projects />
-          </section>
+          </section> */}
         </main>
       </div>
     </div>
