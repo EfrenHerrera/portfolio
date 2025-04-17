@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@sentry/nextjs": "^8.24.0",
     "@svgr/webpack": "^8.1.0",
     "@tabler/icons-react": "^2.47.0",
     "alea": "^1.0.1",

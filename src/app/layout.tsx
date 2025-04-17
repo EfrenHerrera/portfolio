@@ -3,7 +3,6 @@ import { Inter } from 'next/font/google'
 import './globals.scss'
 import MouseFollower from './components/MouseFollower'
 import NaviFly from './components/NaviFly'
-
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {

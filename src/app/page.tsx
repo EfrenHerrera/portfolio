@@ -1,10 +1,19 @@
-import React from 'react'
+"use client";
+import React, { useEffect } from 'react'
 import { navigations, technologies } from '@/config/index'
 import LinksReferences from './components/LinksReferences'
 import Experiences from './components/Experiences'
 import Projects from './components/Projects'
+import * as Sentry from '@sentry/nextjs';
+import { usePathname } from 'next/navigation';
 
 const Home: React.FC = () => {
+  const pathname = usePathname();
+
+  useEffect(() => {
+    Sentry.captureMessage(`User navigated to: ${pathname}`, "info");
+  }, [pathname]);
+
   return (
     <div className="mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-20 lg:px-24 lg:py-0">
       <div className='lg:flex lg:justify-between lg:gap-6'>
