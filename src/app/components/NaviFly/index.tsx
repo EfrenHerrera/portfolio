@@ -62,8 +62,8 @@ const NaviFly = () => {
     { x: 0.9, y: 0.85 },
     { x: 0.45, y: 0.92 },
     { x: 0.15, y: 0.85 },
-    { x: 0.10, y: 0.10 }, // regreso
   ];
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     const navi = naviRef.current;
     if (!navi) return;
