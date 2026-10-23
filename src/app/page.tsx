@@ -3,7 +3,7 @@ import React, { useEffect } from 'react'
 import { navigations, technologies } from '@/config/index'
 import LinksReferences from './components/LinksReferences'
 import Experiences from './components/Experiences'
-import Projects from './components/Projects'
+import AISystems from './components/AISystems'
 import * as Sentry from '@sentry/nextjs';
 import { usePathname } from 'next/navigation';
 
@@ -20,9 +20,9 @@ const Home: React.FC = () => {
         <header className='lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-5/12 lg:flex-col lg:justify-between lg:py-24'>
           <div>
             <h1 className='text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl'>Efren Herrera</h1>
-            <h2 className="mt-3 text-2xl font-medium tracking-tight text-slate-200">Full-Stack Engineer</h2>
+            <h2 className="mt-3 text-2xl font-medium tracking-tight text-slate-200">Full-Stack &amp; AI Systems Engineer</h2>
             <p className="mt-4 max-w-xs leading-normal">
-              I code seamless, innovative, and responsive digital solutions for an unparalleled user experience.
+              I build production software and AI systems that connect products, teams, and day-to-day operations.
             </p>
 
             {/* Technologies of interest */}
@@ -48,7 +48,7 @@ const Home: React.FC = () => {
                 {
                   navigations.map((nav, index) => (
                     <li key={`section-${index}`}>
-                      <a className="group flex items-center py-3 active" href={`#${nav.id}`}>
+                      <a className="group flex items-center rounded-sm py-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900" href={`#${nav.id}`}>
                         <span className="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"></span>
                         <span className="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200">
                           {nav.label}
@@ -72,7 +72,7 @@ const Home: React.FC = () => {
             </div>
             <div>
               <p className="mb-4">
-                Since 2018, I have been engaged in software development. Throughout my career, I have worked with various programming languages and explored different areas within the development landscape. Over the past nearly two years, I have dedicated my efforts to mobile development, collaborating with diverse clients. My experience encompasses both Front-End and Backend development. Currently, I am venturing into the realm of artificial intelligence to undertake a project for one of my clients.
+                Since 2018, I have worked across front-end, backend, and mobile development for products used by diverse clients. Today, that full-stack experience also supports AI systems integrated directly into products and business operations.
               </p>
               <p className="mb-4">
                 My primary focus in recent times has shifted towards creating products and overseeing my own projects. What I find most fulfilling is crafting software at the intersection of design and engineering—creating aesthetically pleasing solutions that are also robust beneath the surface. I thrive on being creative and innovative in my work.
@@ -94,6 +94,10 @@ const Home: React.FC = () => {
                 </span>.
               </p>
             </div>
+          </section>
+
+          <section id="ai-systems" className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24" aria-labelledby="ai-systems-heading">
+            <AISystems />
           </section>
 
           <section id="experience" className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24" aria-label="Work experience">

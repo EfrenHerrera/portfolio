@@ -13,6 +13,10 @@ export const navigations: Navigation[] = [
         label: 'About'
     },
     {
+        id: 'ai-systems',
+        label: 'AI Systems'
+    },
+    {
         id: 'experience',
         label: 'Experience'
     },
@@ -97,8 +101,8 @@ export const experiences: Experience[] = [
         link:"https://dealergeek.com/",
         role: "Full-Stack Developer",
         details: "Senior Engineer",
-        description: "Full-Stack developer with role as team leader, working with technologies such as Python, Golang, React, Angular, Docker, Gitlab, AWS and configuring servers for the deployment of APIs and websites with nginx.",
-        technologies: ["React Native", "Angular", "Python", "MongoDB", "AWS", "Docker", "MySQL"],
+        description: "Led full-stack delivery across web, mobile, APIs, and cloud infrastructure. Built automation and AI-assisted classification workflows for business documents and operational processes.",
+        technologies: ["React Native", "Angular", "Python", "MongoDB", "AWS", "Docker", "MySQL", "Document AI"],
     },
     {
         period: "May 2022 – Aug 2024",
@@ -153,5 +157,3 @@ export const projects: Project[] = [
         img: ""
     },
 ]
-
-
