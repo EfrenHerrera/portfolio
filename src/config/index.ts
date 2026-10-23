@@ -72,9 +72,10 @@ interface Link {
 
 interface Experience {
     period: string;
-    title: string;
+    company: string;
     link?: string;
-    position: string;
+    role: string;
+    details?: string;
     description: string;
     links?: Link[];
     technologies: string[];
@@ -82,26 +83,38 @@ interface Experience {
 
 export const experiences: Experience[] = [
     {
-        period: "Sep 2022 - Present",
-        title: "Full-Stack Developer • Dealergeek",
+        period: "Jun 2026 – Present",
+        company: "Konfío",
+        link: "https://konfio.mx/",
+        role: "Full Stack Engineer Mid",
+        details: "Full-time · Mexico · Remote",
+        description: "Building React microfrontends and Python microservices, using LaunchDarkly feature flags and observability with Grafana and New Relic. Integrated the Storyblok CMS and explored AWS services, including CloudWatch monitoring.",
+        technologies: ["React", "Python", "Microfrontends", "AWS", "CloudWatch", "LaunchDarkly", "Grafana", "New Relic", "Storyblok"],
+    },
+    {
+        period: "Sep 2022 – Apr 2026",
+        company: "Dealergeek",
         link:"https://dealergeek.com/",
-        position: "Senior Engineer",
+        role: "Full-Stack Developer",
+        details: "Senior Engineer",
         description: "Full-Stack developer with role as team leader, working with technologies such as Python, Golang, React, Angular, Docker, Gitlab, AWS and configuring servers for the deployment of APIs and websites with nginx.",
         technologies: ["React Native", "Angular", "Python", "MongoDB", "AWS", "Docker", "MySQL"],
     },
     {
-        period: "May 2022 - Sep 2022",
-        title: "Mobile Developer • Kab",
+        period: "May 2022 – Aug 2024",
+        company: "Kab",
         link: "https://www.kabplataforma.com/",
-        position: "Semi-Senior Engineer",
+        role: "Mobile Developer",
+        details: "Semi-Senior Engineer",
         description: "Mobile developer (React Native), application for Uber and Didi style taxi drivers. local project of my current city.",
         technologies: ["React Native", "NodeJS", "ParseDB"]
     },
     {
-        period: "2020 - 2021",
-        title: "Full-Stack Developer • Grupo Git",
+        period: "2020 – 2021",
+        company: "Grupo Git",
         link:"https://grupogit.com/",
-        position: "Junior Engineer",
+        role: "Full-Stack Developer",
+        details: "Junior Engineer",
         description: "Full-stack developer, with React, Flutter, NodeJS, Golang and PostgreSQL, in different projects.",
         technologies: ["React", "Flutter", "NodeJS", "Golang", "PostgreSQL"]
     }
@@ -140,7 +153,5 @@ export const projects: Project[] = [
         img: ""
     },
 ]
-
-
 
 
